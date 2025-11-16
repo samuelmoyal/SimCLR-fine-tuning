@@ -19,10 +19,10 @@ The notebook walks through the full pipeline:
   - Horizontal flips  
   - Normalization  
 
-![Plan](image_plan.png)
-![Image cropped 1](image_cropped_1.png)
-![Image cropped 2](image_cropped_2.png)
-![Data augmentation](data_augmentation.png)
+![Plan](images/preprocessing/image_plan.png)
+![Image cropped 1](images/preprocessing/image_cropped_1.png)
+![Image cropped 2](images/preprocessing/image_cropped_2.png)
+![Data augmentation](images/preprocessing/data_augmentation.png)
 
 
 
@@ -65,13 +65,13 @@ Several configurations were tested:
 
 > Replace these image paths with your actual plot screenshots.
 
-![Training Curve with train on layer4, temperature=0.5](layer4only_loss_curve_adamw_scheduler_model=resnet18_out128_lr0.0001_temp0.5_w1e-05_batch64.png)
-![Training Curve with train on layer4, temperature=0.6](layer4only_loss_curve_adamw_scheduler_model=resnet18_out128_lr0.0001_temp0.6_w1e-06_batch64.png)
+![Training Curve with train on layer4, temperature=0.5](images/plot_loss_curves/layer4only_loss_curve_adamw_scheduler_model=resnet18_out128_lr0.0001_temp0.5_w1e-05_batch64.png)
+![Training Curve with train on layer4, temperature=0.6](images/plot_loss_curves/layer4only_loss_curve_adamw_scheduler_model=resnet18_out128_lr0.0001_temp0.6_w1e-06_batch64.png)
 
 
 ### 🔍 Weight Change Visualization (Layer 4 Analysis)
 
-![Visualization of some weights in layer 4](weight_visualization.png)
+![Visualization of some weights in layer 4](images/weight_visualization/weight_visualization.png)
 
 - Confirm that **only unfrozen layers** are modified  
 - Detect potential training instabilities  
@@ -90,8 +90,8 @@ The notebook implements a lightweight evaluation pipeline:
 
 ### Example t-SNE Visualization
 
-![t-SNE Embeddings on validation set before training](assets/tsne_embeddings.png)
-![t-SNE Embeddings on validation set after training](assets/tsne_embeddings.png)
+![t-SNE Embeddings on validation set before training](images/embeddingd/Embeddings_on_validation_set_before_training.png)
+![t-SNE Embeddings on validation set after training](Embeddings_on_validation_set_after_training.png)
 
 This gives a qualitative view of how well classes separate in the learned space.
 
