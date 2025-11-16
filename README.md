@@ -50,21 +50,33 @@ Several configurations were tested:
 #### ⭐ Model comparisons
 - ResNet50  
 - ResNet18 baseline  
-- ResNet18 with **AdamW + scheduler**  
+- ResNet18 with layer1-3 frozen: best results
+
 
 #### ⭐ Hyperparameters explored
 - Learning rate  
 - Weight decay  
 - Batch size  
 - Scheduler strategies (cosine annealing, warm restarts…)
+- Temperature
+- Output dimensions
 
 #### 📈 Example Training Curves
 
 > Replace these image paths with your actual plot screenshots.
 
-![Training Curve - ResNet18](assets/resnet18_training_curve.png)
-![Training Curve - ResNet50](assets/resnet50_training_curve.png)
-![AdamW+Scheduler vs SGD](assets/optimizer_comparison.png)
+![Training Curve with train on layer4, temperature=0.5](layer4only_loss_curve_adamw_scheduler_model=resnet18_out128_lr0.0001_temp0.5_w1e-05_batch64.png)
+![Training Curve with train on layer4, temperature=0.6](layer4only_loss_curve_adamw_scheduler_model=resnet18_out128_lr0.0001_temp0.6_w1e-06_batch64.png)
+
+
+### 🔍 Weight Change Visualization (Layer 4 Analysis)
+
+![Visualization of some weights in layer 4](weight_visualization.png)
+
+- Confirm that **only unfrozen layers** are modified  
+- Detect potential training instabilities  
+- Assess whether fine-tuning is gentle or overly disruptive
+
 
 ### 5. **One-Shot Evaluation Protocol**
 The notebook implements a lightweight evaluation pipeline:
@@ -78,7 +90,8 @@ The notebook implements a lightweight evaluation pipeline:
 
 ### Example t-SNE Visualization
 
-![t-SNE Embeddings](assets/tsne_embeddings.png)
+![t-SNE Embeddings on validation set before training](assets/tsne_embeddings.png)
+![t-SNE Embeddings on validation set after training](assets/tsne_embeddings.png)
 
 This gives a qualitative view of how well classes separate in the learned space.
 
