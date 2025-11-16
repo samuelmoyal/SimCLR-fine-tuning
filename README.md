@@ -90,8 +90,9 @@ The notebook implements a lightweight evaluation pipeline:
 
 ### Example t-SNE Visualization
 
-![t-SNE Embeddings on validation set before training](images/embeddingd/Embeddings_on_validation_set_before_training.png)
-![t-SNE Embeddings on validation set after training](Embeddings_on_validation_set_after_training.png)
+![t-SNE Embeddings on validation set before training](images/embeddings/Embeddings_on_validation_set_before_training.png)
+![t-SNE Embeddings on validation set after training](images/embeddings/Embeddings_on_validatin_set_after_training.png)
+
 
 This gives a qualitative view of how well classes separate in the learned space.
 
