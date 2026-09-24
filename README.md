@@ -5,7 +5,7 @@ The goal is to obtain a feature extractor capable of recognizing a new unseen sy
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 The notebook walks through the full pipeline:
 
@@ -47,13 +47,13 @@ The notebook implements the full SimCLR loss:
 
 Several configurations were tested:
 
-#### ⭐ Model comparisons
+####  Model comparisons
 - ResNet50  
 - ResNet18 baseline  
 - ResNet18 with layer1-3 frozen: best results
 
 
-#### ⭐ Hyperparameters explored
+####  Hyperparameters explored
 - Learning rate  
 - Weight decay  
 - Batch size  
@@ -61,7 +61,7 @@ Several configurations were tested:
 - Temperature
 - Output dimensions
 
-#### 📈 Example Training Curves
+####  Example Training Curves
 
 > Replace these image paths with your actual plot screenshots.
 
@@ -69,7 +69,7 @@ Several configurations were tested:
 ![Training Curve with train on layer4, temperature=0.6](images/plot_loss_curves/layer4only_loss_curve_adamw_scheduler_model=resnet18_out128_lr0.0001_temp0.6_w1e-06_batch64.png)
 
 
-### 🔍 Weight Change Visualization (Layer 4 Analysis)
+###  Weight Change Visualization (Layer 4 Analysis)
 
 ![Visualization of some weights in layer 4](images/weight_visualization/weight_visualization.png)
 
@@ -110,7 +110,7 @@ It also highlights limitations and potential future improvements (e.g., larger b
   - Contrastive learning loop  
   - Evaluation on one-shot classification  
 
-⚠️ **This repository does NOT include:**
+ **This repository does NOT include:**
 - Model weights  
 - Datasets  
 
@@ -118,7 +118,7 @@ This keeps the repository lightweight and avoids storing large binaries.
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 ### Install dependencies
 ```bash
